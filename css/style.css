@@ -44,6 +44,10 @@ nav {
     font-weight: 400;
 }
 
+nav ul li.item a:hover {
+    color: aqua;
+}
+
 form fieldset {
     padding: 25px;
 }
@@ -75,6 +79,14 @@ form fieldset {
     background-color: rgb(13, 115, 152);
     cursor: pointer;
 
+}
+
+.button:hover {
+    background-color: white;
+    color: rgb(13, 115, 152);
+    border-color: rgb(13, 115, 152);
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .footer-primera p a {
@@ -111,6 +123,13 @@ form fieldset {
     border: 2px solid lightcyan;
     border-radius: 7px;
     background-color: rgb(13, 115, 152);
+}
+
+.buttonhc:hover {
+    color: rgb(13, 115, 152);
+    background-color: white;
+    border-color: rgb(13, 115, 152);
+    font-size: 18px;
 }
 
 .contenedorHc {
@@ -181,11 +200,23 @@ h2 {
     cursor: pointer;
 }
 
+.button-enviar:hover {
+    background-color: rgb(30, 185, 185);
+    color: white;
+    border-color: white;
+}
+
 .button-resetear {
     border-radius: 15px;
     width: 98px;
     font-weight: 500;
     cursor: pointer;
+}
+
+.button-resetear:hover {
+    background-color: rgba(255, 0, 0, 0.866);
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
 }
 
 p {
