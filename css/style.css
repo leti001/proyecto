@@ -290,76 +290,50 @@ h3 {
     }
 
     /* nav */
-    nav {
-        display: unset;
-        padding: 0px;
-        margin: 0px;
-        border: unset;
-    }
-
     nav ul {
-        width: 100%;
-        height: 40px;
-        background-color: rgb(52, 130, 179);
-        border: 1px solid rgb(0, 84, 253);
-        border-radius: 8px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "itemuno itemdos itemtres itemcuatro itemcinco";
-        justify-content: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
         align-items: center;
-        font-size: small;
-        padding: 0px;
-        margin: 0px;
-        margin-left: 5px;
-        margin-right: 5px;
+        width: 100%;
+        font-size: 13px;
+        height: 20px;
     }
 
-    nav ul li{
-        border-right: 2px solid white;  
+    li.itemuno {
+        width: 60px;
+        text-align: start;
     }
 
-    nav ul li:last-of-type {
-        border-right: none !important;
+    li.itmemdos {
+        text-align: start;
     }
 
-    .itemuno {
-        grid-area: itemuno;
-        justify-self: center;
-        align-self: center;
-        width: 100px;
+    li.itemtres{
+        text-align: start;
     }
 
-    .itemdos {
-        grid-area: itemdos;
-        justify-self: center;
-        align-self: center;
-        width: 100px;
+    li.itemcuatro {
+        text-align: start;
     }
 
-    .itemtres {
-        grid-area: itemtres;
-        justify-self: center;
-        align-self: center;
-        width: 100px;
+    li.itemcinco {
+        width: max-content;
     }
 
-    .itemcuatro {
-        grid-area: itemcuatro;
-        justify-self: center;
-        align-self: center;
-        width: 100px;
+    li.itemcinco a {
+        padding-right: 10px;
     }
 
-    .itemcinco {
-        grid-area: itemcinco;
-        justify-self: center;
-        align-self: center;
-        width: 118.3px;
+    nav ul li {
+        border-right: 0px;
     }
 
+    nav ul li as:not(:last-of-type) {
+        border-right: 2px solid white;
+    }
+
+    
     /* seccion:main  */
 
     .flex-container-main {
@@ -455,6 +429,7 @@ h3 {
     }
 
     .flex-footer {
+        width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
@@ -585,6 +560,10 @@ h3 {
 
     h5 {
         font-size: 16px;
+    }
+
+    .carousel-inner {
+        object-fit: cover !important;
     }
 
     
