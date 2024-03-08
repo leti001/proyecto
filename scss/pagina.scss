@@ -1,0 +1,27 @@
+// reset
+@import "../scss/pagescss/reset.scss";
+
+@mixin media-query-mobile {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+// caja
+@import "../scss/pagescss/cajas.scss";
+
+// index
+@import "../scss/pagescss/index.scss";
+
+// app
+@import "../scss/pagescss/app.scss";
+
+// contacto
+@import "../scss/pagescss/contacto.scss";
+
+// comunidad
+@import "../scss/pagescss/comunidad.scss";
+
+// hospitales cercanos
+@import "../scss/pagescss/hospitales-cercanos.scss"
+

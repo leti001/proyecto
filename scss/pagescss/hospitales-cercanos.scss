@@ -1,0 +1,52 @@
+main {
+    h3 {
+        font-size: map-get($font-size, subtitle);
+    }
+
+    .contenedorHcMain {
+        font-size: map-get($font-size, parrafo);
+        @include flexbox(row nowrap, space-between, center);
+
+        @each $x in uno, dos, tres {
+            .contenedorHcMain-#{$x} {
+                margin-right: 100px;
+
+                @if $x==uno {
+                    margin-left: 50px;
+                }
+
+                @else if $x==tres {
+                    margin-right: 0 px;
+
+                    .buttonhc {
+                        @extend .btn;
+                        background-color: lightseagreen;
+                        @include sombra;
+                        width: 100px;
+                        &:hover {
+                            color: lightseagreen;
+                            background-color: black;
+                            border: 2px solid lightseagreen;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contenedorHc {
+        @include flexbox(row nowrap, space-evenly, center);
+        .hijodosHc{
+            h5 {
+                font-size: map-get($font-size, parrafo);
+            }
+        }
+        .hijoHc{
+        img {
+        width: 470px;
+        height: 250px;
+        }
+        }
+
+    }
+}

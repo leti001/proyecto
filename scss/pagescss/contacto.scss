@@ -1,0 +1,35 @@
+main {
+    h3 {
+        font-size: map-get($font-size, subtitle);
+        margin-bottom: 30px;
+    }
+
+    form {
+        .medida-contacto {
+            font-size: map-get($font-size, parrafo);
+        }
+
+        .button-enviar {
+            @extend .btn;
+            background-color: lightgreen;
+            @include sombra;
+            &:hover {
+                color: lightgreen;
+                background-color: black;
+                border: 2px solid lightgreen;
+            }
+        }
+
+        .button-resetear {
+            @extend .btn;
+            background-color: lightsalmon;
+            @include sombra;
+            &:hover {
+                color: lightsalmon;
+                background-color: black;
+                border: 2px solid lightsalmon;
+            }
+        }
+    }
+
+}
