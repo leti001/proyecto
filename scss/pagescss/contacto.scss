@@ -2,11 +2,17 @@ main {
     h3 {
         font-size: map-get($font-size, subtitle);
         margin-bottom: 30px;
+        @include media-query-mobile(){
+            font-size: map-get($font-size-mobile, subtitle);
+        }
     }
 
     form {
         .medida-contacto {
             font-size: map-get($font-size, parrafo);
+            @include media-query-mobile(){
+                font-size: map-get($font-size-mobile, parrafo);
+            }
         }
 
         .button-enviar {

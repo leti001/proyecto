@@ -1,9 +1,16 @@
 
-
+html, body {
+    @include media-query-mobile(){
+        overflow-x: hidden;
+    }
+}
 body {
     background-color: rgb(156, 220, 241);
     font-family: 'Roboto', italic !important;
     font-size: 19px;
+    @include media-query-mobile(){
+        position: relative;
+    }
    
 }
 

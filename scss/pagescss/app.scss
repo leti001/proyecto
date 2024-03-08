@@ -1,15 +1,21 @@
 main {
     .medida-container-app {
-        @include media-query-mobile(){
+        @include media-query-mobile() {
             padding: 0px;
         }
+
         .medida-row-app {
-            @include media-query-mobile(){
+            @include media-query-mobile() {
                 width: 100%;
-                padding-left: 8px;
+                padding-left: 20px;
             }
+
             &:not(:last-of-type) {
                 margin-bottom: 70px;
+
+                @include media-query-mobile() {
+                    margin-bottom: 35px;
+                }
             }
 
             &:first-of-type {
@@ -18,7 +24,8 @@ main {
 
             h3 {
                 font-size: map-get($font-size, subtitle-2);
-                @include media-query-mobile(){
+
+                @include media-query-mobile() {
                     font-size: map-get($font-size-mobile, subtitle-2);
                     margin: 0px;
                     margin-bottom: 10px;
@@ -28,7 +35,8 @@ main {
             p {
                 font-size: map-get($font-size, parrafo);
                 text-align: justify;
-                @include media-query-mobile(){
+
+                @include media-query-mobile() {
                     font-size: map-get($font-size-mobile, parrafo);
                 }
             }
@@ -39,6 +47,12 @@ main {
                     width: 100%;
                     height: 150px;
                     @include sombra;
+
+                    @include media-query-mobile() {
+                        height: 120px;
+                        border-radius: 71% 29% 59% 41% / 69% 45% 55% 31% !important;
+
+                    }
                 }
             }
         }
@@ -47,7 +61,8 @@ main {
 
 a {
     @extend .volver-arriba;
-    @include media-query-mobile(){
+
+    @include media-query-mobile() {
         font-size: map-get($font-size-mobile, subtitle-2);
     }
 }
