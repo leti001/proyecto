@@ -24,9 +24,8 @@
 }
 
 body {
-  background-image: url(../../resources/main.jpg);
+  background-image: url(../resources/main.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-size: cover;
   font-family: "Roboto", italic !important;
   font-size: 19px;
@@ -45,7 +44,7 @@ header {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../../resources/head.jpg);
+  background-image: url(../resources/head.jpg);
   padding-top: 10px;
   margin-bottom: 35px;
 }
@@ -307,7 +306,7 @@ section form .medida-contacto .button-resetear:hover {
 }
 
 footer {
-  background-image: url(../../resources/summer_bkg_54_a.jpg);
+  background-image: url(../resources/summer_bkg_54_a.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

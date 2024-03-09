@@ -5,9 +5,8 @@ html, body {
     }
 }
 body {
-    background-image: url(../../resources/main.jpg);
+    background-image: url(../resources/main.jpg);
     @include background(no-repeat, cover);
-    background-size: cover;
     font-family: 'Roboto', italic !important;
     font-size: 19px;
     @include media-query-mobile(){
@@ -18,7 +17,7 @@ body {
 header {
     @include flexbox(row nowrap, space-between, baseline);
     @include background(no-repeat, cover);
-    background-image: url(../../resources/head.jpg);
+    background-image: url(../resources/head.jpg);
     padding-top: 10px;
     margin-bottom: 35px;
     @include media-query-mobile(){
@@ -288,7 +287,7 @@ section {
 
 
 footer {
-    background-image: url(../../resources/summer_bkg_54_a.jpg);
+    background-image: url(../resources/summer_bkg_54_a.jpg);
     @include background(no-repeat, cover);
     @include media-query-mobile() {
         width: 100%
