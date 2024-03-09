@@ -1,13 +1,17 @@
 main {
     section {
-        .medida-row-app{
-            img {
-                #medida-imagen-comunidad {
-                    border-radius: 73% 27% 37% 63% / 58% 45% 55% 42%   !important;
-                
+        .medida-row-app {
+
+            #medida-imagen-comunidad {
+                border-radius: 24% 76% 22% 78% / 69% 26% 74% 31% !important;
+                height: 150px;
+                @include media-query-mobile(){
+                    height: 125px;
                 }
 
             }
+
+
         }
     }
 }

@@ -1,18 +1,34 @@
 main {
     h3 {
         font-size: map-get($font-size, subtitle);
+
+        @include media-query-mobile() {
+            font-size: map-get($font-size-mobile, subtitle);
+        }
     }
 
     .contenedorHcMain {
         font-size: map-get($font-size, parrafo);
         @include flexbox(row nowrap, space-between, center);
 
+        @include media-query-mobile() {
+            font-size: map-get($font-size-mobile, parrafo);
+        }
+
         @each $x in uno, dos, tres {
             .contenedorHcMain-#{$x} {
                 margin-right: 100px;
 
+                @include media-query-mobile() {
+                    margin-right: 0px;
+                }
+
                 @if $x==uno {
                     margin-left: 50px;
+
+                    @include media-query-mobile() {
+                        margin-left: 10px;
+                    }
                 }
 
                 @else if $x==tres {
@@ -23,10 +39,16 @@ main {
                         background-color: lightseagreen;
                         @include sombra;
                         width: 100px;
+
                         &:hover {
                             color: lightseagreen;
                             background-color: black;
                             border: 2px solid lightseagreen;
+                        }
+
+                        @include media-query-mobile() {
+                            width: 70px;
+                            margin-right: 20px
                         }
                     }
                 }
@@ -36,16 +58,26 @@ main {
 
     .contenedorHc {
         @include flexbox(row nowrap, space-evenly, center);
-        .hijodosHc{
+
+        .hijodosHc {
             h5 {
                 font-size: map-get($font-size, parrafo);
+
+                @include media-query-mobile() {
+                    font-size: map-get($font-size-mobile, subtitle-2);
+                }
             }
         }
-        .hijoHc{
-        img {
-        width: 470px;
-        height: 250px;
-        }
+
+        .hijoHc {
+            img {
+                width: 470px;
+                height: 250px;
+                @include media-query-mobile(){
+                    width: fit-content;
+                    height: 170px;
+                }
+            }
         }
 
     }

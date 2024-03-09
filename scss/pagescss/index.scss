@@ -1,11 +1,13 @@
 
 html, body {
     @include media-query-mobile(){
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
 }
 body {
-    background-color: rgb(156, 220, 241);
+    background-image: url(../../resources/main.jpg);
+    @include background(no-repeat, cover);
+    background-size: cover;
     font-family: 'Roboto', italic !important;
     font-size: 19px;
     @include media-query-mobile(){
@@ -16,8 +18,8 @@ body {
 
 header {
     @include flexbox(row nowrap, space-between, baseline);
-    background-image: url(../resources/agua.png);
     @include background(no-repeat, cover);
+    background-image: url(../../resources/head.jpg);
     padding-top: 10px;
     margin-bottom: 35px;
     @include media-query-mobile(){
@@ -26,15 +28,26 @@ header {
     }
     div {
         padding-left: 15px;
-
+        display: inline-block;
+        @include media-query-mobile(){
+            padding-left: 2px;
+        }
         h1 {
             font-size: map-get($font-size, title);
             color: rgb(0, 89, 255);
-
-            @include media-query-mobile() {
+            @include media-query-mobile(){
                 font-size: map-get($font-size-mobile, title);
-                
             }
+
+        }
+        img {
+            width: 50px;
+            padding-bottom: 10px;
+            @include media-query-mobile(){
+                width: 40px;
+                padding-left: 5px;
+            }
+            
         }
     }
 
@@ -43,11 +56,15 @@ header {
             ul {
                 text-align: start;
                 font-size: map-get($font-size, parrafo);
-                padding-top: 5px;
+                padding-top: 10px;
 
                 @include media-query-mobile() {
                     font-size: map-get($font-size-mobile, parrafo);
-                    margin-right: 5px;
+                    margin: 0px;
+                    padding: 0px;
+                    padding-top: 8px;
+                    padding-right: 8px;
+                    width: 100%;
                     
                 }
 
@@ -58,6 +75,7 @@ header {
 
                     @include media-query-mobile() {
                         padding: 0px;
+                        margin: 0px;
 
                     }
 
@@ -68,7 +86,7 @@ header {
                         padding-right: 30px;
 
                         @include media-query-mobile() {
-                            padding-right: 5px;
+                            padding-right: 2px;
                             border-right: unset;
                         }
                     }
@@ -79,7 +97,7 @@ header {
                         font-weight: 800;
 
                         @include media-query-mobile() {
-                            font-weight: 450;
+                            font-weight: 500;
                         }
 
                         &:hover {
@@ -95,7 +113,9 @@ header {
 }
 
 main {
+    
     .flex-container-main {
+        width: 100%;
         padding-bottom: 8px;
         @include media-query-mobile(){
             @include flexbox(column wrap, start, start);
@@ -106,6 +126,7 @@ main {
                 padding-top: 10px;
                 @include media-query-mobile(){
                     width: 550px;
+                    margin: 0px;
                     padding: 0px;
                     
                 }
@@ -152,9 +173,9 @@ main {
     }
 
     .container-section {
-        padding-right: 20px;
         width: 100%;
         margin-bottom: 20px;
+        @include flexbox(row nowrap, space-between,center);
         @include media-query-mobile(){
             display: grid;
             grid-template-columns: repeat(2,1fr);
@@ -172,8 +193,9 @@ main {
         }
 
         .seccion-index {
+            width: 22%;
             margin-top: 20px;
-            margin-right: 30px;
+            margin-right: 0px;
             background-color: lightblue;
             border: 2px solid rgb(85, 157, 181);
             @include sombra;
@@ -183,16 +205,6 @@ main {
                 padding: 0px;
             }
 
-            &:first-of-type {
-                margin-left: 30px;
-                @include media-query-mobile(){
-                    margin: 0px;
-                }
-            }
-
-            &:last-of-type {
-                margin-right: 0px;
-            }
 
             img {
                 margin-top: 10px;
@@ -278,7 +290,7 @@ section {
 
 
 footer {
-    background-image: url(../resources/aguanoche.png);
+    background-image: url(../../resources/summer_bkg_54_a.jpg);
     @include background(no-repeat, cover);
     @include media-query-mobile() {
         width: 100%
@@ -292,7 +304,7 @@ footer {
         .footer-primera {
             padding-top: 10px;
             margin-left: 60px;
-            border-left: 2px solid whitesmoke;
+            border-left: 2px solid rgb(0, 0, 0);
             border-radius: 8px;
             @include media-query-mobile(){
                 margin-left: 50px;
@@ -311,10 +323,15 @@ footer {
 
                 a {
                     text-decoration: none;
-                    color: white;
+                    color: rgb(0, 0, 0);
+                    font-weight: 400;
 
                     &:hover {
                         color: rgb(0, 255, 242);
+                    }
+                    @include media-query-mobile(){
+                        font-size: map-get($font-size-mobile, parrafo);
+                        font-weight: 500;
                     }
                 }
             }
@@ -328,6 +345,7 @@ footer {
 
             h6 {
                 font-size: map-get($font-size, subtitle-2);
+                color: black !important;
 
                 @include media-query-mobile() {
                     font-size: map-get($font-size-mobile, subtitle-2);
@@ -352,9 +370,11 @@ footer {
 
         .footer-tercera {
             padding-bottom: 130px;
+            width: 25%;
 
             h6 {
                 font-size: map-get($font-size, subtitle-2);
+                color: black !important;
 
                 @include media-query-mobile() {
                     font-size: map-get($font-size-mobile, subtitle-2);
