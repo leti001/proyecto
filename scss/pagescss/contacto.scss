@@ -19,6 +19,9 @@ main {
             @extend .btn;
             background-color: lightgreen;
             @include sombra;
+            @include media-query-mobile(){
+                width: 50px;
+            }
             &:hover {
                 color: lightgreen;
                 background-color: black;
@@ -31,6 +34,9 @@ main {
             @extend .btn;
             background-color: lightsalmon;
             @include sombra;
+            @include media-query-mobile(){
+                width: 50px;
+            }
             &:hover {
                 color: lightsalmon;
                 background-color: black;

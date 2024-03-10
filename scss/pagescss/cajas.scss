@@ -1,3 +1,9 @@
+@mixin media-query-mobile {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
 $font-size: (
     title: 33px,
     subtitle:26px,
@@ -6,8 +12,8 @@ $font-size: (
 );
 
 $font-size-mobile: (
-    title: 25px,
-    subtitle: 17px,
+    title: 23px,
+    subtitle: 16px,
     subtitle-2: 14px,
     parrafo: 10px,
 );

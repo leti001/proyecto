@@ -125,7 +125,7 @@ header div h1 {
 }
 @media (max-width: 576px) {
   header div h1 {
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 header div img {
@@ -174,6 +174,12 @@ header div nav ul li:hover {
   transform: scale(1.25);
   transition: all 0.5s ease;
 }
+@media (max-width: 576px) {
+  header div nav ul li:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+  }
+}
 header div nav ul li a {
   text-decoration: none;
   color: rgb(0, 0, 0);
@@ -216,7 +222,7 @@ main .flex-container-main .medida-main .seccion-main h3 {
 }
 @media (max-width: 576px) {
   main .flex-container-main .medida-main .seccion-main h3 {
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 10px;
   }
 }
@@ -242,7 +248,7 @@ main .flex-container-main .medida-main .seccion-main p {
 }
 @media (max-width: 576px) {
   .seccionDos h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 .seccionDos .container-section {
@@ -267,7 +273,6 @@ main .flex-container-main .medida-main .seccion-main p {
     padding-top: 10px;
     padding-bottom: 25px;
     width: 100%;
-    overflow-x: hidden;
   }
 }
 .seccionDos .container-section .seccion-index {
@@ -294,7 +299,7 @@ main .flex-container-main .medida-main .seccion-main p {
 }
 @media (max-width: 576px) {
   .seccionDos .container-section .seccion-index:hover:hover {
-    transform: scale(0.9);
+    transform: scale(1.05);
     transition: all 1s ease;
   }
 }
@@ -334,7 +339,7 @@ section .contact {
 }
 @media (max-width: 576px) {
   section .contact {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 section form .medida-contacto {
@@ -351,6 +356,11 @@ section form .medida-contacto .button-enviar {
   -moz-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
 }
+@media (max-width: 576px) {
+  section form .medida-contacto .button-enviar {
+    width: 50px;
+  }
+}
 section form .medida-contacto .button-enviar:hover {
   color: lightgreen;
   background-color: black;
@@ -361,6 +371,11 @@ section form .medida-contacto .button-resetear {
   -webkit-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
+}
+@media (max-width: 576px) {
+  section form .medida-contacto .button-resetear {
+    width: 50px;
+  }
 }
 section form .medida-contacto .button-resetear:hover {
   color: lightsalmon;
@@ -414,8 +429,8 @@ footer .flex-footer .footer-primera p {
   }
 }
 @media (max-width: 576px) {
-  footer .flex-footer .footer-primera p {
-    font-size: 10px;
+  footer .flex-footer .footer-primera p:first-of-type {
+    width: 70px;
   }
 }
 footer .flex-footer .footer-primera p:last-of-type {
@@ -424,6 +439,19 @@ footer .flex-footer .footer-primera p:last-of-type {
 footer .flex-footer .footer-primera p:nth-of-type(2) {
   width: 50px;
   text-align: center;
+}
+@media (max-width: 576px) {
+  footer .flex-footer .footer-primera p:nth-of-type(2) {
+    width: 40px;
+    padding: 0px;
+  }
+}
+@media (max-width: 576px) {
+  footer .flex-footer .footer-primera p:nth-of-type(3) {
+    border: 2px solid black;
+    width: 80px;
+    text-align: start;
+  }
 }
 footer .flex-footer .footer-primera p:hover {
   transform: scale(1.25);
@@ -586,7 +614,7 @@ main h3 {
 }
 @media (max-width: 576px) {
   main h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 main form .medida-contacto {
@@ -603,6 +631,11 @@ main form .button-enviar {
   -moz-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
 }
+@media (max-width: 576px) {
+  main form .button-enviar {
+    width: 50px;
+  }
+}
 main form .button-enviar:hover {
   color: lightgreen;
   background-color: black;
@@ -613,6 +646,11 @@ main form .button-resetear {
   -webkit-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
+}
+@media (max-width: 576px) {
+  main form .button-resetear {
+    width: 50px;
+  }
 }
 main form .button-resetear:hover {
   color: lightsalmon;
@@ -640,7 +678,7 @@ main h3 {
 }
 @media (max-width: 576px) {
   main h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 main .contenedorHcMain {
@@ -662,12 +700,7 @@ main .contenedorHcMain .contenedorHcMain-uno {
 }
 @media (max-width: 576px) {
   main .contenedorHcMain .contenedorHcMain-uno {
-    margin-right: 0px;
-  }
-}
-@media (max-width: 576px) {
-  main .contenedorHcMain .contenedorHcMain-uno {
-    margin-left: 10px;
+    margin: 0px;
   }
 }
 main .contenedorHcMain .contenedorHcMain-dos {
@@ -675,7 +708,7 @@ main .contenedorHcMain .contenedorHcMain-dos {
 }
 @media (max-width: 576px) {
   main .contenedorHcMain .contenedorHcMain-dos {
-    margin-right: 0px;
+    margin: 0px;
   }
 }
 main .contenedorHcMain .contenedorHcMain-tres {
@@ -684,7 +717,7 @@ main .contenedorHcMain .contenedorHcMain-tres {
 }
 @media (max-width: 576px) {
   main .contenedorHcMain .contenedorHcMain-tres {
-    margin-right: 0px;
+    margin: 0px;
   }
 }
 main .contenedorHcMain .contenedorHcMain-tres .buttonhc {
@@ -702,7 +735,15 @@ main .contenedorHcMain .contenedorHcMain-tres .buttonhc:hover {
 @media (max-width: 576px) {
   main .contenedorHcMain .contenedorHcMain-tres .buttonhc {
     width: 70px;
-    margin-right: 20px;
+  }
+}
+@media (max-width: 576px) {
+  main .contenedorHcMain {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+    margin-left: 20px;
   }
 }
 main .contenedorHc {
@@ -726,7 +767,7 @@ main .contenedorHc .hijoHc img {
 }
 @media (max-width: 576px) {
   main .contenedorHc .hijoHc img {
-    width: fit-content;
+    width: 250px;
     height: 170px;
   }
 }

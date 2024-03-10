@@ -42,6 +42,7 @@ header {
             animation-duration: 2s;
             animation-timing-function: ease;
             transition: all 2s ease;
+
             @include media-query-mobile() {
                 font-size: map-get($font-size-mobile, title);
             }
@@ -96,7 +97,13 @@ header {
                     &:hover {
                         transform: scale(1.25);
                         transition: all 0.5s ease;
+
+                        @include media-query-mobile() {
+                            transform: scale(1.1);
+                            transition: transform 0.5s ease;
+                        }
                     }
+
                     a {
                         text-decoration: none;
                         color: rgb(0, 0, 0);
@@ -202,7 +209,6 @@ main {
             padding-top: 10px;
             padding-bottom: 25px;
             width: 100%;
-            overflow-x: hidden;
 
         }
 
@@ -228,7 +234,7 @@ main {
 
                 @include media-query-mobile() {
                     &:hover {
-                        transform: scale(0.9);
+                        transform: scale(1.05);
                         transition: all 1s ease;
                     }
                 }
@@ -293,6 +299,11 @@ section {
                 background-color: lightgreen;
                 @include sombra;
 
+                @include media-query-mobile() {
+                    width: 50px;
+                }
+
+
                 &:hover {
                     color: lightgreen;
                     background-color: black;
@@ -305,6 +316,10 @@ section {
                 @extend .btn;
                 background-color: lightsalmon;
                 @include sombra;
+
+                @include media-query-mobile() {
+                    width: 50px;
+                }
 
                 &:hover {
                     color: lightsalmon;
@@ -358,18 +373,34 @@ footer {
                     font-size: map-get($font-size-mobile, parrafo);
                 }
 
-                @include media-query-mobile() {
-                    font-size: map-get($font-size-mobile, parrafo);
+                &:first-of-type {
+                    @include media-query-mobile() {
+                        width: 70px;
+                    }
                 }
-                
+
                 &:last-of-type {
                     width: 200px;
                 }
-                
+
                 &:nth-of-type(2) {
                     width: 50px;
                     text-align: center;
+
+                    @include media-query-mobile() {
+                        width: 40px;
+                        padding: 0px;
+                    }
                 }
+
+                &:nth-of-type(3) {
+                    @include media-query-mobile() {
+                        border: 2px solid black;
+                        width: 80px;
+                        text-align: start;
+                    }
+                }
+
                 &:hover {
                     transform: scale(1.25);
                     transition: all 0.5s ease;
@@ -457,12 +488,14 @@ footer {
 
                     }
                 }
+
                 .redes {
                     cursor: pointer;
+
                     &:hover {
                         transform: scale(1.16);
                         transition: all 1s ease;
-                
+
                     }
                 }
 

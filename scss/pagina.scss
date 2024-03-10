@@ -1,12 +1,5 @@
 // reset
 @import "../scss/pagescss/reset.scss";
-
-@mixin media-query-mobile {
-    @media (max-width: 576px) {
-        @content;
-    }
-}
-
 // caja
 @import "../scss/pagescss/cajas.scss";
 
