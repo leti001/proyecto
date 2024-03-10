@@ -219,6 +219,7 @@ main .flex-container-main .medida-main .seccion-main p {
   margin-right: 0px;
   background-color: lightblue;
   border: 2px solid rgb(85, 157, 181);
+  transition: all 1s ease;
   -webkit-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
@@ -228,6 +229,16 @@ main .flex-container-main .medida-main .seccion-main p {
     width: 100%;
     margin: 0px;
     padding: 0px;
+  }
+}
+.seccionDos .container-section .seccion-index:hover {
+  transform: scale(1.1);
+  transition: all 1s ease;
+}
+@media (max-width: 576px) {
+  .seccionDos .container-section .seccion-index:hover:hover {
+    transform: scale(0.9);
+    transition: all 1s ease;
   }
 }
 .seccionDos .container-section .seccion-index img {
@@ -426,6 +437,18 @@ footer .flex-footer .footer-tercera div:not(:last-of-type) {
   }
 }
 
+@keyframes movimiento-repetitivo {
+  0% {
+    transform: scale(1.1);
+    transition: all 1s ease;
+  }
+  50% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    background-image: radial-gradient(to right, white, blue);
+  }
+}
 @media (max-width: 576px) {
   main .medida-container-app {
     padding: 0px;
@@ -471,6 +494,11 @@ main .medida-container-app .medida-row-app div .imagen-app {
   border-radius: 33% 67% 73% 27%/34% 66% 34% 66% !important;
   width: 100%;
   height: 150px;
+  animation-name: movimiento-repetitivo;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
   -webkit-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);
   box-shadow: 12px -4px 34px -4px rgba(0, 0, 0, 0.51);

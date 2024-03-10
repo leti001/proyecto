@@ -195,11 +195,23 @@ main {
             margin-right: 0px;
             background-color: lightblue;
             border: 2px solid rgb(85, 157, 181);
+            transition: all 1s ease;
+
             @include sombra;
             @include media-query-mobile(){
                 width: 100%;
                 margin: 0px;
                 padding: 0px;
+            }
+            &:hover {
+                transform: scale(1.1);
+                transition: all 1s ease;
+                @include media-query-mobile(){
+                    &:hover {
+                        transform: scale(0.9);
+                        transition: all 1s ease;
+                    }
+                }
             }
 
 
