@@ -17,6 +17,18 @@
   color: rgb(0, 255, 149);
 }
 
+@keyframes movimiento-repetitivo {
+  0% {
+    transform: scale(1.1);
+    transition: all 1s ease;
+  }
+  50% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    background-image: radial-gradient(to right, white, blue);
+  }
+}
 @media (max-width: 576px) {
   html, body {
     overflow-x: hidden !important;
@@ -437,18 +449,6 @@ footer .flex-footer .footer-tercera div:not(:last-of-type) {
   }
 }
 
-@keyframes movimiento-repetitivo {
-  0% {
-    transform: scale(1.1);
-    transition: all 1s ease;
-  }
-  50% {
-    transform: rotateX(30deg);
-  }
-  100% {
-    background-image: radial-gradient(to right, white, blue);
-  }
-}
 @media (max-width: 576px) {
   main .medida-container-app {
     padding: 0px;
@@ -559,6 +559,11 @@ main form .button-resetear:hover {
 main section .medida-row-app #medida-imagen-comunidad {
   border-radius: 24% 76% 22% 78%/69% 26% 74% 31% !important;
   height: 150px;
+  animation-name: movimiento-repetitivo;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 @media (max-width: 576px) {
   main section .medida-row-app #medida-imagen-comunidad {
