@@ -44,6 +44,7 @@ main {
                             color: lightseagreen;
                             background-color: black;
                             border: 2px solid lightseagreen;
+                            @extend .scala-btn;
                         }
 
                         @include media-query-mobile() {

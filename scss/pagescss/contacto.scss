@@ -23,6 +23,7 @@ main {
                 color: lightgreen;
                 background-color: black;
                 border: 2px solid lightgreen;
+                @extend .scala-btn;
             }
         }
 
@@ -34,6 +35,7 @@ main {
                 color: lightsalmon;
                 background-color: black;
                 border: 2px solid lightsalmon;
+                @extend .scala-btn;
             }
         }
     }

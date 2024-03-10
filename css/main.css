@@ -64,6 +64,11 @@
     transition: all 1s ease;
   }
 }
+.scala-btn, main .contenedorHcMain .contenedorHcMain-tres .buttonhc:hover, main form .button-resetear:hover, main form .button-enviar:hover, footer .flex-footer .footer-segunda button:hover, section form .medida-contacto .button-resetear:hover, section form .medida-contacto .button-enviar:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
 @media (max-width: 576px) {
   html,
   body {
@@ -499,6 +504,13 @@ footer .flex-footer .footer-tercera div:not(:last-of-type) {
     width: 25px;
     height: 25px;
   }
+}
+footer .flex-footer .footer-tercera div .redes {
+  cursor: pointer;
+}
+footer .flex-footer .footer-tercera div .redes:hover {
+  transform: scale(1.16);
+  transition: all 1s ease;
 }
 
 @media (max-width: 576px) {

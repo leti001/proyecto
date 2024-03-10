@@ -297,6 +297,7 @@ section {
                     color: lightgreen;
                     background-color: black;
                     border: 2px solid lightgreen;
+                    @extend .scala-btn;
                 }
             }
 
@@ -309,6 +310,7 @@ section {
                     color: lightsalmon;
                     background-color: black;
                     border: 2px solid lightsalmon;
+                    @extend .scala-btn;
                 }
             }
         }
@@ -415,6 +417,7 @@ footer {
                     color: whitesmoke;
                     background-color: black;
                     border: 2px solid white;
+                    @extend .scala-btn;
                 }
 
                 @include media-query-mobile() {
@@ -452,6 +455,14 @@ footer {
                         width: 25px;
                         height: 25px;
 
+                    }
+                }
+                .redes {
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.16);
+                        transition: all 1s ease;
+                
                     }
                 }
 
