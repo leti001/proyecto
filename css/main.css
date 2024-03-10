@@ -29,8 +29,44 @@
     background-image: radial-gradient(to right, white, blue);
   }
 }
+@keyframes sic-sac {
+  0% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(0.98);
+    transition: all 0.5s ease;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(0.98);
+    transition: all 0.5s ease;
+  }
+}
+@keyframes titulo {
+  0% {
+    transform: translateY(-9px);
+  }
+  25% {
+    transform: translateY(0.5px);
+    transition: all 1s ease;
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+  100% {
+    transform: translateY(0.5px);
+    transition: all 1s ease;
+  }
+}
 @media (max-width: 576px) {
-  html, body {
+  html,
+  body {
     overflow-x: hidden !important;
   }
 }
@@ -77,6 +113,10 @@ header div {
 header div h1 {
   font-size: 33px;
   color: rgb(0, 89, 255);
+  animation-name: titulo;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  transition: all 2s ease;
 }
 @media (max-width: 576px) {
   header div h1 {
@@ -86,6 +126,11 @@ header div h1 {
 header div img {
   width: 50px;
   padding-bottom: 10px;
+  animation-name: sic-sac;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 @media (max-width: 576px) {
   header div img {
@@ -97,6 +142,7 @@ header div nav ul {
   text-align: start;
   font-size: 17px;
   padding-top: 10px;
+  margin-right: 17px;
 }
 @media (max-width: 576px) {
   header div nav ul {
@@ -119,15 +165,9 @@ header div nav ul li {
     margin: 0px;
   }
 }
-header div nav ul li:not(:last-of-type) {
-  border-right: 3px solid rgb(0, 55, 255);
-  padding-right: 30px;
-}
-@media (max-width: 576px) {
-  header div nav ul li:not(:last-of-type) {
-    padding-right: 2px;
-    border-right: unset;
-  }
+header div nav ul li:hover {
+  transform: scale(1.25);
+  transition: all 0.5s ease;
 }
 header div nav ul li a {
   text-decoration: none;
@@ -361,6 +401,7 @@ footer .flex-footer .footer-primera {
 }
 footer .flex-footer .footer-primera p {
   font-size: 17px;
+  width: 120px;
 }
 @media (max-width: 576px) {
   footer .flex-footer .footer-primera p {
@@ -371,6 +412,17 @@ footer .flex-footer .footer-primera p {
   footer .flex-footer .footer-primera p {
     font-size: 10px;
   }
+}
+footer .flex-footer .footer-primera p:last-of-type {
+  width: 200px;
+}
+footer .flex-footer .footer-primera p:nth-of-type(2) {
+  width: 50px;
+  text-align: center;
+}
+footer .flex-footer .footer-primera p:hover {
+  transform: scale(1.25);
+  transition: all 0.5s ease;
 }
 footer .flex-footer .footer-primera p a {
   text-decoration: none;
