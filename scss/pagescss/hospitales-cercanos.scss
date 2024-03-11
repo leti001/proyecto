@@ -71,7 +71,7 @@ main {
         }
 
         .hijoHc {
-            img {
+            iframe {
                 width: 470px;
                 height: 250px;
                 @include media-query-mobile(){

@@ -448,7 +448,6 @@ footer .flex-footer .footer-primera p:nth-of-type(2) {
 }
 @media (max-width: 576px) {
   footer .flex-footer .footer-primera p:nth-of-type(3) {
-    border: 2px solid black;
     width: 80px;
     text-align: start;
   }
@@ -761,12 +760,12 @@ main .contenedorHc .hijodosHc h5 {
     font-size: 14px;
   }
 }
-main .contenedorHc .hijoHc img {
+main .contenedorHc .hijoHc iframe {
   width: 470px;
   height: 250px;
 }
 @media (max-width: 576px) {
-  main .contenedorHc .hijoHc img {
+  main .contenedorHc .hijoHc iframe {
     width: 250px;
     height: 170px;
   }
