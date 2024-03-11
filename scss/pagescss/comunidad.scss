@@ -1,10 +1,21 @@
 main {
     section {
         .medida-row-app {
+            img {
+                border-radius: 24% 76% 22% 78% / 69% 26% 74% 31% !important;
+                height: 150px;
+                width: 250px;
+                animation-name: movimiento-repetitivo;
+                animation-duration: 3s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
 
             #medida-imagen-comunidad {
                 border-radius: 24% 76% 22% 78% / 69% 26% 74% 31% !important;
                 height: 150px;
+                width: 150px;
                 animation-name: movimiento-repetitivo;
                 animation-duration: 3s;
                 animation-timing-function: ease;
