@@ -1,5 +1,6 @@
 main {
     .medida-container-app {
+        margin-bottom: 20px;
         @include media-query-mobile() {
             padding: 0px;
         }

@@ -540,6 +540,9 @@ footer .flex-footer .footer-tercera div .redes:hover {
   transition: all 1s ease;
 }
 
+main .medida-container-app {
+  margin-bottom: 20px;
+}
 @media (max-width: 576px) {
   main .medida-container-app {
     padding: 0px;
