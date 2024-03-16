@@ -6,8 +6,7 @@ body {
 }
 
 body {
-    background-image: url(../resources/main.jpg);
-    @include background(no-repeat, cover);
+    background-color: rgba(20, 121, 222, 0.164);
     font-family: 'Roboto', italic !important;
     font-size: 19px;
 
@@ -50,7 +49,8 @@ header {
         }
 
         img {
-            width: 50px;
+            object-fit: cover;
+            width: 75px;
             padding-bottom: 10px;
             animation-name: sic-sac;
             animation-duration: 0.7s;
@@ -70,7 +70,7 @@ header {
         nav {
             ul {
                 text-align: start;
-                font-size: map-get($font-size, parrafo);
+                font-size: map-get($font-size, subtitle);
                 padding-top: 10px;
                 margin-right: 17px;
 
@@ -127,33 +127,22 @@ header {
 }
 
 main {
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     .flex-container-main {
+        margin-left: 5px;
         width: 100%;
         padding-bottom: 8px;
 
-        @include media-query-mobile() {
-            @include flexbox(column wrap, start, start);
-        }
-
         .medida-main {
             .seccion-main {
-                padding-top: 10px;
-
-                @include media-query-mobile() {
-                    width: 550px;
-                    margin: 0px;
-                    padding: 0px;
-
-                }
-
-
                 h3 {
                     font-size: map-get($font-size, subtitle);
 
                     @include media-query-mobile() {
                         font-size: map-get($font-size-mobile, subtitle);
-                        margin-bottom: 10px;
+                        margin: 0px !important;
                     }
                 }
 
@@ -184,8 +173,19 @@ main {
 }
 
 .seccionDos {
+    padding-top: 60px;
+    padding-bottom: 70px;
+    background-color: rgba(56, 166, 220, 0.071);
+
+    @include media-query-mobile() {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
     h3 {
         font-size: map-get($font-size, subtitle);
+        margin-bottom: 30px;
+        margin-left: 10px;
 
         @include media-query-mobile() {
             font-size: map-get($font-size-mobile, subtitle);
@@ -194,8 +194,7 @@ main {
 
     .container-section {
         width: 100%;
-        margin-bottom: 20px;
-        @include flexbox(row nowrap, space-between, baseline);
+        @include flexbox(row nowrap, space-evenly, center);
 
         @include media-query-mobile() {
             display: grid;
@@ -213,14 +212,14 @@ main {
         }
 
         .seccion-index {
-            width: 22%;
-            height: 450px;
+            width: 23.5%;
+            height: 470px;
             margin-right: 0px;
             background-color: lightblue;
             border: 2px solid rgb(85, 157, 181);
             transition: all 1s ease;
             padding: 0px;
-            
+
 
             @include sombra;
 
@@ -228,7 +227,7 @@ main {
                 width: 100%;
                 height: 250px;
                 margin: 0px;
-                
+
             }
 
             &:hover {
@@ -246,8 +245,8 @@ main {
 
             img {
                 margin-top: 10px;
-                width: 150px;
-                height: 150px;
+                height: 140px;
+                object-fit: contain;
 
                 @include media-query-mobile() {
                     width: 110px;
@@ -277,11 +276,22 @@ main {
     }
 }
 
-section {
+.seccion-contacto {
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    background-color: rgba(173, 216, 230, 0.46);
+    border: 2px solid rgb(249, 244, 244);
+    border-radius: 40px;
+    width: fit-content;
+    text-align: center;
+
     .contact {
         font-size: map-get($font-size, subtitle);
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 
         @include media-query-mobile() {
             font-size: map-get($font-size-mobile, subtitle);
@@ -290,16 +300,57 @@ section {
 
 
     form {
+        padding-bottom: 30px;
+
         .medida-contacto {
-            font-size: map-get($font-size, parrafo);
+            font-size: map-get($font-size, subtitle-2);
 
             @include media-query-mobile() {
                 font-size: map-get($font-size-mobile, parrafo)
             }
 
+            label {
+                padding-left: 20px;
+                padding-top: 10px;
+
+                @include media-query-mobile() {
+                    padding-left: 7px;
+                }
+
+            }
+
+            input {
+                border: 1px solid black;
+            }
+
+            select {
+                border: 1px solid black;
+            }
+
+            textarea {
+                margin-top: 20px;
+                border: 2px solid black;
+
+                @include media-query-mobile() {
+                    margin-top: 10px;
+                }
+            }
+
+
+            .separador {
+                margin-top: 30px;
+                margin-bottom: 20px;
+
+                @include media-query-mobile() {
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                }
+            }
+
             .button-enviar {
                 @extend .btn;
                 background-color: lightgreen;
+                width: 100px;
                 @include sombra;
 
                 @include media-query-mobile() {
@@ -319,6 +370,7 @@ section {
                 @extend .btn;
                 background-color: lightsalmon;
                 @include sombra;
+                width: 110px;
 
                 @include media-query-mobile() {
                     width: 50px;
@@ -332,6 +384,18 @@ section {
                 }
             }
         }
+    }
+
+
+}
+
+.arriba {
+    margin-bottom: 40px;
+    margin-left: 10px;
+    font-size: map-get($font-size, subtitle);
+
+    @include media-query-mobile() {
+        margin-bottom: 10px;
     }
 
     a {
@@ -348,32 +412,42 @@ footer {
     background-image: url(../resources/summer_bkg_54_a.jpg);
     @include background(no-repeat, cover);
 
-    @include media-query-mobile() {
-        width: 100%
-    }
-
     .flex-footer {
         @include flexbox(row nowrap, space-evenly, center);
+        width: 100%;
         padding-top: 20px;
         padding-bottom: 15px;
+        padding-left: 50px;
+
+        @include media-query-mobile() {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas:
+                "primero tercera"
+                "primero segunda";
+            column-gap: 6px;
+            padding-left: 3px;
+        }
+
 
         .footer-primera {
-            padding-top: 10px;
-            margin-left: 60px;
-            border-left: 2px solid rgb(0, 0, 0);
+            border-left: 4px solid rgba(0, 0, 0, 0.63);
             border-radius: 8px;
 
             @include media-query-mobile() {
-                margin-left: 50px;
                 padding: 0px;
+                font-size: map-get($font-size, subtitle);
+                width: 165px;
+                grid-area: primero;
+
             }
 
             p {
-                font-size: map-get($font-size, parrafo);
-                width: 120px;
+                font-size: map-get($font-size, subtitle-2);
 
                 @include media-query-mobile() {
-                    font-size: map-get($font-size-mobile, parrafo);
+                    font-size: map-get($font-size-mobile, subtitle-2);
                 }
 
                 &:first-of-type {
@@ -383,17 +457,12 @@ footer {
                 }
 
                 &:last-of-type {
-                    width: 200px;
+                    width: fit-content;
                 }
 
                 &:nth-of-type(2) {
                     width: 50px;
                     text-align: center;
-
-                    @include media-query-mobile() {
-                        width: 40px;
-                        padding: 0px;
-                    }
                 }
 
                 &:nth-of-type(3) {
@@ -418,7 +487,7 @@ footer {
                     }
 
                     @include media-query-mobile() {
-                        font-size: map-get($font-size-mobile, parrafo);
+                        font-size: map-get($font-size-mobile, subtitle-2);
                         font-weight: 500;
                     }
                 }
@@ -428,11 +497,18 @@ footer {
         .footer-segunda {
             @include media-query-mobile() {
                 width: fit-content;
-                font-size: map-get($font-size, parrafo);
+                grid-area: segunda;
+            }
+
+            input {
+                @include media-query-mobile() {
+                    width: 100px;
+                    text-align: center;
+                }
             }
 
             h6 {
-                font-size: map-get($font-size, subtitle-2);
+                font-size: map-get($font-size, subtitle);
                 color: black !important;
 
                 @include media-query-mobile() {
@@ -442,8 +518,9 @@ footer {
 
             button {
                 margin-top: 10px;
+                width: 120px;
                 @extend .btn;
-                font-size: map-get($font-size, parrafo);
+                font-size: map-get($font-size, subtitle-2);
                 @include sombra;
 
                 &:hover {
@@ -455,50 +532,55 @@ footer {
 
                 @include media-query-mobile() {
                     font-size: map-get($font-size-mobile, parrafo);
+                    width: 80px;
                 }
             }
         }
 
         .footer-tercera {
             padding-bottom: 130px;
-            width: 25%;
+
+            @include media-query-mobile() {
+                grid-area: tercera;
+                padding-bottom: 0px;
+                display: inline-block !important;
+
+            }
 
             h6 {
-                font-size: map-get($font-size, subtitle-2);
+                font-size: map-get($font-size, subtitle);
                 color: black !important;
 
                 @include media-query-mobile() {
                     font-size: map-get($font-size-mobile, subtitle-2);
                 }
+
             }
 
-            div {
-                display: inline-block;
+            .contenedordos {
+
 
                 &:not(:last-of-type) {
                     padding-right: 10px;
-
-                    @include media-query-mobile() {
-                        padding-right: 5px;
-                    }
-                }
-
-                img {
-                    @include media-query-mobile() {
-                        width: 25px;
-                        height: 25px;
-
-                    }
                 }
 
                 .redes {
                     cursor: pointer;
+
 
                     &:hover {
                         transform: scale(1.16);
                         transition: all 1s ease;
 
                     }
+
+                    img {
+                        @include media-query-mobile() {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
                 }
 
             }
