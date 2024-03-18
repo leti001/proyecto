@@ -1,34 +1,50 @@
 main {
-    section {
-        .medida-row-app {
-            img {
-                border-radius: 24% 76% 22% 78% / 69% 26% 74% 31% !important;
-                height: 150px;
-                width: 250px;
-                animation-name: movimiento-repetitivo;
-                animation-duration: 3s;
-                animation-timing-function: ease;
+    .medida-container-comunidad {
+        @include flexbox (wrap, space-between, center);
+        height: auto;
+        text-align: justify;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .seccion {
+            border: 3px solid violet;
+            border-radius: 20px;
+            width: 45%;
+            height: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 40px;
+            margin-top: 20px;
+            .imagenes {
+                width: 40%;
+                object-fit: contain !important;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                animation-name: zoom-outin;
                 animation-iteration-count: infinite;
+                animation-timing-function: ease;
+                animation-duration: 2s;
                 animation-direction: alternate;
+
+
             }
 
-            #medida-imagen-comunidad {
-                border-radius: 24% 76% 22% 78% / 69% 26% 74% 31% !important;
-                height: 150px;
-                width: 150px;
-                animation-name: movimiento-repetitivo;
-                animation-duration: 3s;
-                animation-timing-function: ease;
-                animation-iteration-count: infinite;
-                animation-direction: alternate;
-
-                @include media-query-mobile() {
-                    height: 125px;
+            div {
+                h4 {
+                    font-size: map-get($font-size, subtitle);
+                    margin-bottom: 15px;
+                    margin-top: 20px;
                 }
 
+                p {
+                    font-size: map-get($font-size, parrafo);
+                    @include media-query-mobile(){
+                        font-size: map-get($font-size-mobile, parrafo);
+                    }
+                }
             }
-
-
         }
+
     }
+
 }

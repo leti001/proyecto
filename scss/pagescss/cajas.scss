@@ -5,8 +5,8 @@
 }
 
 $font-size: (
-    title: 33px,
-    subtitle:28px,
+    title: 34px,
+    subtitle:26px,
     subtitle-2:24px,
     parrafo: 20px,
 );
@@ -20,7 +20,6 @@ $font-size-mobile: (
 
 .btn {
     border-radius: 20px;
-    width: 80px;
 }
 
 .volver-arriba {
@@ -117,4 +116,14 @@ $font-size-mobile: (
 .scala-btn {
     transform: scale(1.1);
     transition: transform 0.5s ease;
+}
+
+@keyframes zoom-outin {
+    0%{
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+    
 }
