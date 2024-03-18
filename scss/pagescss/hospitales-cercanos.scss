@@ -1,19 +1,15 @@
 main {
+    padding: 0px;
     h3 {
         font-size: map-get($font-size, subtitle);
-
-        @include media-query-mobile() {
-            font-size: map-get($font-size-mobile, subtitle);
+        @include media-query-mobile(){
+            font-size: map-get($font-size-mobile, subtitle-2);
         }
     }
 
     .contenedorHcMain {
         font-size: map-get($font-size, parrafo);
         @include flexbox(row nowrap, space-between, center);
-
-        @include media-query-mobile() {
-            font-size: map-get($font-size-mobile, parrafo);
-        }
 
         @each $x in uno, dos, tres {
             .contenedorHcMain-#{$x} {
@@ -41,43 +37,26 @@ main {
                             border: 2px solid lightseagreen;
                             @extend .scala-btn;
                         }
-                        @include media-query-mobile(){
-                            width: 70px;
-                        }
                     }
                 }
             }
-        }
-        @include media-query-mobile(){
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3,1fr);
-            row-gap: 20px;
-            margin-left: 20px;
         }
     }
 
     .contenedorHc {
         @include flexbox(row nowrap, space-evenly, center);
+        height: auto;
 
         .hijodosHc {
             h5 {
                 font-size: map-get($font-size, parrafo);
-
-                @include media-query-mobile() {
-                    font-size: map-get($font-size-mobile, subtitle-2);
-                }
             }
         }
 
         .hijoHc {
             iframe {
-                width: 470px;
-                height: 250px;
-                @include media-query-mobile(){
-                    width: 250px;
-                    height: 170px;
-                }
+                object-fit: contain;
+                height: auto;
             }
         }
 
