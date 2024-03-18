@@ -28,7 +28,7 @@
                 <h1 id="titulo" class="fw-bold">DHC</h1>
             </div>
         </div>
-        <div>
+        <div class="my-auto nav">
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -42,60 +42,55 @@
         </div>
     </header>
     <main>
-        <h3 class="text-center">CONTACTO</h3>
-        <form action="" class="mx-auto">
-            <fieldset class="text-center medida-contacto">
-                <label for="">Nombre:</label>
-                <input type="text" placeholder="escribe tu nombre">
-                <br>
-                <br>
-                <label for="">Apellido:</label>
-                <input type="text" placeholder="escribe tu apellido">
-                <br>
-                <br>
-                <label for="">Mail:</label>
-                <input type="email" name="" id="" placeholder="ejemplo@gmail.com">
-                <br>
-                <br>
-                <label for="">Motivo:</label>
-                <select name="" id="">
-                    <option value="" disabled selected>Selecciona</option>
-                    <option value="problemas">Problemas con la aplicacion</option>
-                    <option value="ideas">Ideas para mejorar la aplicacion</option>
-                    <option value="trabaja">Trabaja con nosotros</option>
-                </select>
-                <br>
-                <br>
-                <label for="">Puede explicarnos mas?</label>
-                <br>
-                <textarea name="" id="" cols="25" rows="5"></textarea>
-                <br>
-                <br>
-                <input type="button" class="btn-outline-light button-enviar" value="Enviar">
-                <input type="reset" class="btn-outline-light button-resetear" value="Resetear">
-            </fieldset>
-        </form>
-        <br>
-        <a href="#titulo" class="volver-arriba">Volver arriba</a>
-
+        <section class="seccion-contacto mx-auto">
+            <h3 class="contact">CONTACTO</h3>
+            <form action="" class="border-form">
+                <fieldset class="text-center medida-contacto">
+                    <label for="">Nombre:</label>
+                    <input type="text" placeholder="escribe tu nombre">
+                    <label for="">Apellido:</label>
+                    <input type="text" placeholder="escribe tu apellido">
+                    <div class="separador">
+                        <label for="">Mail:</label>
+                        <input type="email" name="" id="" placeholder="ejemplo@gmail.com">
+                        <label for="">Motivo:</label>
+                        <select name="" id="">
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="problemas">Problemas con la aplicacion</option>
+                            <option value="ideas">Ideas para mejorar la aplicacion</option>
+                            <option value="trabaja">Trabaja con nosotros</option>
+                        </select>
+                    </div>
+                    <label for="">Puede explicarnos mas?</label>
+                    <p><textarea name="" id="" cols="50" rows="5"></textarea>
+                    </p>
+                    <p>
+                        <input type="button" class="btn-outline-light button-enviar" value="Enviar">
+                        <input type="reset" class="btn-outline-light button-resetear" value="Resetear">
+                    </p>
+                </fieldset>
+            </form>
+    
+        </section>
     </main>
-    <br>
-    <footer class="footer container-fluid ">
+    <div class="arriba">
+        <a href="#titulo">Volver arriba</a>
+    </div>
+    <footer class="footer container-fluid">
         <div class="row flex-footer">
-            <div class="col-4 footer-primera my-auto">
+            <div class="col-4 col-lg-4 footer-primera mx-auto">
                 <p class="fw-light"><a href="../index.html">Home</a></p>
                 <p class="fw-light"><a href="./app.html">App</a></p>
                 <p class="fw-light"><a href="./contacto.html">Contacto</a></p>
                 <p class="fw-light"><a href="./comunidad.html">Comunidad</a></p>
-                <p class="fw-light"><a href="./hospitalesCercanos.html">Hospitales cercanos</a></p>
+                <p class="fw-light"><a href=".hospitalesCercanos.html">Hospitales cercanos</a></p>
             </div>
-            <div class="col-4 footer-segunda text-center my-auto">
+            <div class="col-4 col-lg-4 footer-segunda text-center my-auto mx-auto">
                 <h6 class="text-white fw-bold">Suscribete</h6>
                 <input type="text" placeholder="ejemplo@gmail.com">
-                <br>
-                <button type="submit" class="button">Enviar</button>
+                <p><button type="submit" class="button">Enviar</button></p>
             </div>
-            <div class="col-4 footer-tercera text-center">
+            <div class="col-4 col-lg-4 footer-tercera text-center mx-auto">
                 <h6 class=" text-white fw-bold">Nuestras redes</h6>
                 <div class="contenedordos">
                     <div class="redes">

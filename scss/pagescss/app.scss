@@ -47,6 +47,7 @@ main {
                     border-radius: 33% 67% 73% 27% / 34% 66% 34% 66% !important;
                     width: 100%;
                     height: 150px;
+                    object-fit: contain;
                     animation-name: movimiento-repetitivo;
                     animation-duration: 3s;
                     animation-timing-function: ease;
