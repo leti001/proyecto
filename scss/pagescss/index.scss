@@ -441,6 +441,7 @@ footer {
             }
 
             button {
+               
                 margin-top: 10px;
                 @extend .btn;
                 font-size: map-get($font-size, parrafo);
