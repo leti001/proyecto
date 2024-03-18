@@ -14,7 +14,7 @@ main {
         @include flexbox(row nowrap, space-between, center);
 
         @include media-query-mobile() {
-            @include flexbox(row wrap, space-between, center);
+            @include flexbox(column nowrap, space-between, center);
             font-size: map-get($font-size-mobile, parrafo);
             width: 70%;
             margin-left: auto;
@@ -26,9 +26,6 @@ main {
         @each $x in uno, dos, tres {
             .contenedorHcMain-#{$x} {
                 margin-right: 100px;
-                @include media-query-mobile(){
-                    margin-right: 0px;
-                }
 
                 @include media-query-mobile() {
                     margin: 0px;
@@ -40,6 +37,7 @@ main {
                     @include media-query-mobile() {
                         margin-bottom: 15px;
                         margin-left: auto;
+                        margin-right: auto;
                     }
                 }
 
