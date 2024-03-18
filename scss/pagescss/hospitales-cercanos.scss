@@ -1,8 +1,10 @@
 main {
     padding: 0px;
+
     h3 {
         font-size: map-get($font-size, subtitle);
-        @include media-query-mobile(){
+
+        @include media-query-mobile() {
             font-size: map-get($font-size-mobile, subtitle-2);
         }
     }
@@ -11,32 +13,74 @@ main {
         font-size: map-get($font-size, parrafo);
         @include flexbox(row nowrap, space-between, center);
 
+        @include media-query-mobile() {
+            @include flexbox(row wrap, space-between, center);
+            font-size: map-get($font-size-mobile, parrafo);
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            text-align: center;
+        }
+
         @each $x in uno, dos, tres {
             .contenedorHcMain-#{$x} {
                 margin-right: 100px;
                 @include media-query-mobile(){
+                    margin-right: 0px;
+                }
+
+                @include media-query-mobile() {
                     margin: 0px;
                 }
 
                 @if $x==uno {
                     margin-left: 50px;
+
+                    @include media-query-mobile() {
+                        margin-bottom: 15px;
+                        margin-left: auto;
+                    }
                 }
 
                 @else if $x==tres {
                     margin-right: 0 px;
+                    margin-top: 20px;
+
+                    @include media-query-mobile() {
+                        margin-top: 12px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
 
                     .buttonhc {
                         @extend .btn;
                         background-color: lightseagreen;
                         @include sombra;
                         width: 100px;
+                        @include media-query-mobile(){
+                            background-color: lightgreen;
+                            width: 80px;
+                        }
 
                         &:hover {
                             color: lightseagreen;
                             background-color: black;
                             border: 2px solid lightseagreen;
                             @extend .scala-btn;
+                            @include media-query-mobile {
+                                color: lightgreen;
+                                background-color: rgb(0, 0, 0);
+                                border: 1px solid rgb(13, 164, 15);
+                            }
                         }
+                    }
+                }
+
+                @else {
+                    @include media-query-mobile() {
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                 }
             }
@@ -44,12 +88,29 @@ main {
     }
 
     .contenedorHc {
-        @include flexbox(row nowrap, space-evenly, center);
+        margin-top: 40px;
+        margin-bottom: 20px;
+        @include flexbox(row wrap, space-evenly, center);
         height: auto;
+        @include media-query-mobile(){
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
 
         .hijodosHc {
             h5 {
+                font-size: map-get($font-size, subtitle-2);
+                @include media-query-mobile(){
+                    font-size: map-get($font-size-mobile, subtitle-2);
+                }
+            }
+            p {
                 font-size: map-get($font-size, parrafo);
+                @include media-query-mobile(){
+                    font-size: map-get($font-size-mobile, parrafo);
+                }
             }
         }
 
@@ -57,6 +118,10 @@ main {
             iframe {
                 object-fit: contain;
                 height: auto;
+                @include media-query-mobile(){
+                    width: auto;
+                    margin-bottom: 10px;
+                }
             }
         }
 

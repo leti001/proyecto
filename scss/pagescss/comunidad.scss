@@ -1,13 +1,17 @@
 main {
     .medida-container-comunidad {
-        @include flexbox (wrap, space-between, center);
+        @include flexbox (row wrap, space-between, center);
         height: auto;
         text-align: justify;
         padding-top: 20px;
         padding-bottom: 20px;
+        @include media-query-mobile(){
+            padding: 0px;
+        }
 
         .seccion {
-            border: 3px solid violet;
+            border: 3px solid rgb(144, 189, 251);
+            background-color: rgb(234, 244, 248);
             border-radius: 20px;
             width: 45%;
             height: auto;
@@ -15,9 +19,14 @@ main {
             padding-right: 20px;
             margin-bottom: 40px;
             margin-top: 20px;
+            @include media-query-mobile {
+                width: fit-content;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
             .imagenes {
                 width: 40%;
-                object-fit: contain !important;
+                object-fit: contain;
                 margin-top: 20px;
                 margin-bottom: 10px;
                 animation-name: zoom-outin;
@@ -25,15 +34,24 @@ main {
                 animation-timing-function: ease;
                 animation-duration: 2s;
                 animation-direction: alternate;
+                @include media-query-mobile(){
+                    width: 40%;
+                    margin-top: 10px;
+                    margin-bottom: 2px;
+                    animation-duration: 1s;
+                }
 
 
             }
 
             div {
                 h4 {
-                    font-size: map-get($font-size, subtitle);
+                    font-size: map-get($font-size, subtitle-2);
                     margin-bottom: 15px;
                     margin-top: 20px;
+                    @include media-query-mobile(){
+                        font-size: map-get($font-size-mobile, subtitle-2);
+                    }
                 }
 
                 p {

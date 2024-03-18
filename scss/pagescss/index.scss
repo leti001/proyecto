@@ -211,7 +211,7 @@ main {
 
         .seccion-index {
             width: 23.5%;
-            height: 470px;
+            height: 500px;
             margin-right: 0px;
             background-color: lightblue;
             border: 2px solid rgb(85, 157, 181);
@@ -504,7 +504,9 @@ footer {
         }
 
         .footer-segunda {
-            margin-bottom: 30px !important;
+            @include media-query-mobile(){
+                margin-bottom: 40px !important;
+            }
             h6 {
                 font-size: map-get($font-size, subtitle);
                 color: black !important;
